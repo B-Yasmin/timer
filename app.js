@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.querySelectorAll('.duration input').forEach(inp => inp.disabled = t.isRunning);
 
     const sp = card.querySelector('.startPause');
-    sp.textContent = t.isRunning ? 'Pausa' : 'Starta';
+    sp.textContent = t.isRunning ? 'Pause' : 'Start';
     sp.classList.toggle('start', !t.isRunning);
     sp.classList.toggle('pause', t.isRunning);
 
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stopBtn.disabled = !t.alarmOn;
       stopBtn.style.display = t.alarmOn ? 'inline-block' : 'none';
       // Knapptext när tiden är slut (tydligt i retro)
-      stopBtn.textContent = t.alarmOn ? 'Tiden är slut – Tysta larm' : 'Tysta larm';
+      stopBtn.textContent = t.alarmOn ? 'Time is up - Silent alarm' : 'Silent alarm';
     }
 
     if (t.alarmOn) {
