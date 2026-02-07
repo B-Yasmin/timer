@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ====== Endast timer-logik (ingen theme/fullscreen/drag/restore/localStorage) ======
 
   const timersEl = document.getElementById('timers');
   const addTimerBtn = document.getElementById('addTimerBtn');
@@ -303,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
         <div class="top">
-          <input class="name" type="text" value="${escapeHtml(t.name)}" placeholder="Skriv ämne (valfritt)" aria-label="Timer-ämne">
-          <button class="remove" type="button" title="Ta bort">×</button>
+          <input class="name" type="text" value="${escapeHtml(t.name)}" placeholder="Enter a subject (optional)" aria-label="Timer-subject">
+          <button class="remove" type="button" title="Remove">×</button>
         </div>
 
         <div class="duration">
@@ -321,9 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="barWrap"><div class="bar"></div></div>
 
         <div class="controls">
-          <button class="btn startPause ${t.isRunning ? 'pause' : 'start'}" type="button">${t.isRunning ? 'Pausa' : 'Starta'}</button>
-          <button class="btn reset" type="button">Återställ standardtid</button>
-          <button class="btn stopAlarm" type="button">Tysta larm</button>
+          <button class="btn startPause ${t.isRunning ? 'pause' : 'start'}" type="button">${t.isRunning ? 'Pause' : 'Start'}</button>
+          <button class="btn reset" type="button">Reset default time</button>
+          <button class="btn stopAlarm" type="button">Time is up - Silent alarm</button>
         </div>
       `;
 
